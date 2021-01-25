@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/popupstyle.css">
+    <title>Extension</title>
+</head>
+<body>
+    <header id = "main-header" class ="container">
+        <h3><span class = "highlight">Couch</span>Block</h3>
+    </header>
+    <section id = "website-box" class ="container">
+        <table>
+            <thead>
+                <tr>
+                    <td><h3>Choose Allowed Websites</h3></td>
+                </tr>
+            </thead>
+            <tbody id = "website-loc"></tbody>
+        </table>
+        <input type = "button" value = "Add Website" id="add-button">
+        <br>
+    </section>
+    <section id = time-box class ="container">
+        <label for="time" id = "time-label">Enter a time for the session to end.</label>
+        <br>
+        <input type="time" id = "time-input">
+        <br>
+        <input type = "button" value = "Start Session" id = "submit-websites">
+    </section>
+
+<script src = "../JavaScript/popup.js"></script>
+</body>
+</html>

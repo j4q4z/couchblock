@@ -1,0 +1,29 @@
+{
+    "manifest_version":2,
+    "name": "Couch Extension",
+    "version":"0.01",
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["JavaScript/content.js"]
+        }
+        
+    ],
+    "background":{
+      "scripts":["JavaScript/background.js"],
+      "persistance":false
+    },
+    "browser_action": {
+        "default_popup": "HTML/popup.html",
+        "default_icon":"images/display.png"
+      },
+      "permissions": [
+        "storage",
+        "webRequestBlocking",
+        "webRequest",
+        "activeTab",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+     ] 
+}

@@ -1,0 +1,81 @@
+body{
+    background-color: #f4f4f4;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    line-height:1.6em;
+    margin:0;
+}
+
+
+#website-box{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+#time-box{
+    text-align: center;
+    background: #35424a;
+    color:white;
+    border-top:#e8491d 2px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+
+#main-header{
+    font-size:20px;
+    text-align: center;
+    background: #35424a;
+    color: white;
+    padding:5px;
+    border-bottom:#e8491d 2px solid;
+}
+
+
+header .highlight{
+    color:#e8491d;
+    font-weight:Bold;
+}
+
+
+table, th{
+    text-align:center;
+  }
+
+
+th {
+    color:black;
+}
+
+input[type = 'button']{
+    padding-left: 3px;
+    padding-right: 3px;
+    height:38px;
+    color: white;
+    border:0;
+    margin-top:5px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+#submit-websites{
+    background:#e8491d; 
+}
+#add-button{
+    background: #35424a;
+}
+
+
+
+.delete-button{
+    color:red;
+    border-color: black;
+    cursor:pointer;
+
+}
+
+
+
