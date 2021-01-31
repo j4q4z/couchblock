@@ -10,8 +10,8 @@ class Ui {
         let tableBody = document.getElementById("website-loc");
         let row = tableBody.insertRow(-1);
         row.innerHTML = 
-        `<td><input type = 'text' placeholder = "Enter website"></input></td>
-        <td id='delete-button'><h4 class = delete-button>X<\h4></td>`;
+        `<td class = "website-input"><input type = 'text' placeholder = "Enter website"></input></td>
+        <td class = "button-data"><h4 class = delete-button>X<\h4></td>`;
     }
 
     // deletes website row
@@ -37,18 +37,26 @@ class data{
             let website = rows[i].children[0].firstChild.value;
             websiteArray.push(website);
         }
-        chrome.storage.sync.set({'array':websiteArray});
+        // chrome.storage.sync.set({'array':websiteArray});
         console.log("website Stored");
 
         // submit the session time
         const sessionTimeEnd = document.getElementById("time-input").value;
-        chrome.storage.sync.set({'endTime':sessionTimeEnd});
+        // chrome.storage.sync.set({'endTime':sessionTimeEnd});
         data.deleteTableBody();
-        // websiteArray = [];
+        data.deleteTimeInput();
+
+
+        chrome.runtime.sendMessage({websiteArray: websiteArray,sessionTimeEnd:sessionTimeEnd},response => console.log(response));
+        
     }
 
     static deleteTableBody(){
         document.getElementById('website-loc').innerHTML = " ";
+    }
+
+    static deleteTimeInput(){
+        document.getElementById('time-input').value = "";
     }
     
     static addCurrentWebsite(){
@@ -56,6 +64,8 @@ class data{
         websiteArray.push(location.hostname);
         Ui.addedWebsiteSuccess();
     }
+
+      
 }
 
 // event listeners

@@ -4,6 +4,9 @@ body{
     font-size:14px;
     line-height:1.6em;
     margin:0;
+    width:280px;
+    max-height:600px;
+    text-align: center;
 }
 
 
@@ -12,43 +15,52 @@ body{
     margin-bottom: 10px;
 }
 
+#website-box .heading{
+    font-weight:500;
+    color:#868e97;
+}
+
+
+#time-box .heading{
+    font-weight:500;
+}
+
+
 
 #time-box{
     text-align: center;
-    background: #35424a;
+    background:#3e4444;
     color:white;
-    border-top:#e8491d 2px solid;
+    border-top:#82b74b 2px solid;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom:30px;
 
 }
-
 
 
 #main-header{
     font-size:20px;
     text-align: center;
-    background: #35424a;
+    background:#3e4444;
     color: white;
-    padding:5px;
-    border-bottom:#e8491d 2px solid;
+    padding:3px;
+    border-bottom:#82b74b 2px solid;
 }
 
 
+
 header .highlight{
-    color:#e8491d;
+    color:#82b74b;
     font-weight:Bold;
 }
 
 
-table, th{
+table{
     text-align:center;
+    width:100%;
   }
 
-
-th {
-    color:black;
-}
 
 input[type = 'button']{
     padding-left: 3px;
@@ -59,23 +71,61 @@ input[type = 'button']{
     margin-top:5px;
     cursor:pointer;
     font-size:12px;
+    font-weight:300;
+    border-radius:4px;
+
+}
+
+
+input[type='time']{
+    margin-top: 5px;
+    margin-bottom:20px
 }
 
 #submit-websites{
-    background:#e8491d; 
+    background: #82b74b;
 }
 #add-button{
-    background: #35424a;
+    background:#3e4444;
 }
-
-
 
 .delete-button{
     color:red;
     border-color: black;
     cursor:pointer;
+    float:left;
+}
 
+.button-data{
+    text-align:left;
 }
 
 
+#nav-bar{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color: #f4f4f4;
+    display:flex;
+    overflow-x:auto;
+}
 
+.nav-link{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    justify-content: center;
+    align-items:center;
+    min-width:50px;
+    overflow:hidden;
+    white-space:nowrap;
+    color:#444444;
+}
+
+.nav-link:hover{
+    background-color:#eeeeee;
+}
+
+.current-page{
+    color:#82b74b;
+}
