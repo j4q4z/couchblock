@@ -9,15 +9,17 @@ chrome.runtime.onMessage.addListener(
 
     chrome.webRequest.onBeforeRequest.addListener(
       function(details) {
-        // check if session running and to block website
+        // check if session running
+        console.log(details);
         const sessionRunning = checkTime(sessionTimeEnd);
+        // check if the website should be blocked
         const websiteBlocked = checkWebsite(details.url,websiteArray);
         if(sessionRunning&&websiteBlocked){
             console.log("BLOCK WEBSITE");
-            return {redirectUrl:"http://127.0.0.1:5500/HTML/redirect.html"};
+            return {redirectUrl:chrome.runtime.getURL("HTML/redirect.html")};
         }
       },
-      {urls: ["<all_urls>"]},
+      {urls: ["http://*/*","https://*/*"],types:["main_frame"]},
       ["blocking"]
     );
     return true;

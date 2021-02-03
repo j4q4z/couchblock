@@ -1,6 +1,7 @@
 
 // Array containing all the websites
 let websiteArray = [];
+let sessionTimeEnd;
 
 
 class Ui {
@@ -33,20 +34,18 @@ class data{
     static submit(e){
         // submit the websites
         let rows = document.querySelector('table').rows;
-        for(let i = 1;i<rows.length;i++){
+        for(let i = 0;i<rows.length;i++){
             let website = rows[i].children[0].firstChild.value;
             websiteArray.push(website);
         }
-        // chrome.storage.sync.set({'array':websiteArray});
-        console.log("website Stored");
 
         // submit the session time
-        const sessionTimeEnd = document.getElementById("time-input").value;
+        sessionTimeEnd = document.getElementById("time-input").value;
+        window.localStorage.setItem('sessionTimeEnd',sessionTimeEnd);
+
         // chrome.storage.sync.set({'endTime':sessionTimeEnd});
         data.deleteTableBody();
         data.deleteTimeInput();
-
-
         chrome.runtime.sendMessage({websiteArray: websiteArray,sessionTimeEnd:sessionTimeEnd},response => console.log(response));
         
     }
@@ -65,9 +64,9 @@ class data{
         Ui.addedWebsiteSuccess();
     }
 
-      
+    
+    
 }
-
 // event listeners
 
 document.getElementById("add-button").addEventListener("click",Ui.addwebsite)
@@ -76,7 +75,6 @@ document.querySelector('table').addEventListener('click',Ui.deletewebsite);
 
 document.getElementById('submit-websites').addEventListener('click',data.submit)
 
-// document.getElementById('add-current').addEventListener('click',data.addCurrentWebsite)
 
 
 
