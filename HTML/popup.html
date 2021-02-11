@@ -6,24 +6,24 @@
     <link rel="stylesheet" href="../css/popupstyle.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <title>Extension</title>
+    <title>CouchBlock</title>
 </head>
 <body>
     <header id = "main-header" class ="container">
         <h3><span class = "highlight">Couch</span>Block</h3>
     </header>
+
     <section id = "website-box" class ="container">
-        <p class = "heading">Pick the websites you would like to access</p>
-        <table>
-            <tbody id = "website-loc"></tbody>
-        </table>
+        <p class = "heading">Pick the websites you would like to access during your session</p>
+        <ul id = "website-list"></ul>
+    
         <input type = "button" value = "Add Website" id="add-button">
         <br>
     </section>
+    
     <section id = time-box class ="container">
         <label for="time" class = "heading">Enter a time for the session to end</label>
         <input type="time" id = "time-input">
-        <br>
         <input type = "button" value = "Start Session" id = "submit-websites">
     </section>
 

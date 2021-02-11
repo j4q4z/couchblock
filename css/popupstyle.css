@@ -1,4 +1,6 @@
 @media screen and (max-width:300px){
+    /* Global */
+    
     body{
         background-color: #f4f4f4;
         font-family:Arial, Helvetica, sans-serif;
@@ -6,56 +8,19 @@
         line-height:1.6em;
         margin:0;
         width:280px;
-        min-height:340px;
         max-height: 620px;
         text-align: center;
+
     
     }
-
-
-    #website-box{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    #website-box .heading{
-        font-weight:500;
-        color:#868e97;
-    }
-
-
-    #time-box .heading{
-        font-weight:500;
-    }
-
-
-
-    #time-box{
-        text-align: center;
-        background:#3e4444;
-        color:white;
-        border-top:#82b74b 2px solid;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom:30px;
-
-    }
-
-
-
-    table{
-        text-align:center;
-        width:100%;
-    }
-
 
     input[type = 'button']{
         padding-left: 3px;
         padding-right: 3px;
         height:38px;
+        width:80px;
         color: white;
         border:0;
-        margin-top:5px;
         cursor:pointer;
         font-size:12px;
         font-weight:300;
@@ -64,14 +29,28 @@
     }
 
 
-    input[type='time']{
-        margin-top: 5px;
-        margin-bottom:20px
+  
+
+    /* Website box */
+
+    #website-box{
+        text-align: center;
+        padding-bottom: 10px;
     }
 
-    #submit-websites{
-        background: #82b74b;
+    #website-box .heading{
+        font-weight:500;
+        color:#868e97;
     }
+        
+    #website-list{
+        list-style-type:none;
+    }
+
+    ul, li {
+         margin: 0; padding: 0; 
+    }
+
     #add-button{
         background:#3e4444;
     }
@@ -80,14 +59,66 @@
         color:red;
         border-color: black;
         cursor:pointer;
-        float:left;
-    }
-
-    .button-data{
-        text-align:left;
+        display:inline-block;
+        margin:0;
     }
 
 
+    /* Time Box */
+
+    #time-box .heading{
+        font-weight:500;
+    }
+
+    #time-box{
+        text-align: center;
+        background:#3e4444;
+        color:#868e97;
+        border-top:#82b74b 2px solid;
+        padding-top:5px;
+        padding-bottom:10px;
+        margin-bottom:20px;
+    }
+
+
+
+    input[type='time']{
+       display:block;
+       float:center;
+       margin:0 auto;
+       margin-bottom:5px;
+       margin-top:5px;
+
+
+    }
+    #submit-websites{
+        background: #82b74b;
+        margin-top:10px;
+        margin-bottom:5px;
+    }
+
+    #error-message{
+        background-color:#ED6160;
+    }
+
+    #success-message{
+        background-color:#82b74b;
+        
+    }
+
+    .message{
+        border-radius: 3px;
+        color:#f4f4f4;
+        display:block;
+        margin-left:40px;
+        margin-right:40px;
+        padding: 3px;
+        margin-top:10px;
+        margin-bottom:0;
+    }
+
+
+    /* Navagation Bar */
     #nav-bar{
         position:fixed;
         bottom:0;
@@ -119,22 +150,18 @@
 
 
 
-    /* Timer stlying */
+    /* Timer styling */
 
     #countdown{
         font-size:42px;
         color: #82b74b;
     }
 
-    #countdown-heading{
-
-    }
-
     #timer-box{
         display:flex;
         flex-direction:column;
         justify-content:center;
-        height:240px;
+        height:266px;
     } 
 }
 
@@ -171,6 +198,12 @@ header .highlight{
         height: 480px;   
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */  
+        background-size:cover; /* Resize the background image to cover the entire container */  
+    }
+    #redirect-heading{
+        margin:0;
+        padding:0;
+        font-size:42px;
+        color:white;
     }
 }
