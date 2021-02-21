@@ -15,7 +15,6 @@ chrome.runtime.onMessage.addListener(
         // check if the website should be blocked
         const websiteBlocked = checkWebsite(details.url,websiteArray);
         if(sessionRunning&&websiteBlocked){
-            console.log("BLOCK WEBSITE");
             return {redirectUrl:chrome.runtime.getURL("HTML/redirect.html")};
         }
       },
@@ -33,7 +32,6 @@ chrome.runtime.onMessage.addListener(
     // check if current website is allowed
     for(website of websiteArray){
             if(currUrl.indexOf(website)!=-1){
-                console.log("BLOCK REJECTED");
                 websiteBlocked=false;
             }
         }
@@ -56,11 +54,7 @@ function checkTime(endTime){
 
     // session still running, block website
     if(currHours<endHours || (currHours===endHours && currMinutes<endMinutes)){
-        console.log("Session running");
         sessionRunning = true;
-    }
-    else{
-    console.log("No session running");
     }
     return sessionRunning;
 

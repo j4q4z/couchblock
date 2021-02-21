@@ -15,9 +15,7 @@ function updateTimer(){
         let hours = endHours - currHours;
         let minutes = endMinutes - currMinutes;
         let timeString;
-        console.log(date);
-        console.log(sessionTimeEnd);
-
+        
         // e.g current time is 9:40 and end time is 9:30
         // time difference would be 0 hours and -10 minutes
         if (currHours<endHours || (currHours===endHours && currMinutes<endMinutes)){

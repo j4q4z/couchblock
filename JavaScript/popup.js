@@ -11,7 +11,7 @@ class Ui {
         let list = document.getElementById("website-list");
         let li = document.createElement("li");
         li.innerHTML = 
-        `<input type = 'text' placeholder = "Enter website"></input><h4 class = delete-button>X<\h4>`;
+        `<input type = 'text' placeholder = "e.g. youtube.com"></input><h4 class = delete-button>X<\h4>`;
         list.appendChild(li);
     }
 
@@ -65,7 +65,9 @@ class data{
                 Ui.error("Please fill all website boxes");
                 return;
             }
-            websiteArray.push(website);
+            else{
+                websiteArray.push(website);
+            }
         }
 
         // submit the session time

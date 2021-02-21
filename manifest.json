@@ -1,21 +1,18 @@
 {
     "manifest_version":2,
-    "name": "Couch Extension",
-    "version":"0.01",
+    "name": "Couch Block",
+    "version":"0.0.1",
     "background":{
       "scripts":["JavaScript/background.js"],
       "persistance":false
     },
     "browser_action": {
         "default_popup": "HTML/popup.html",
-        "default_icon":"images/display.png"
+        "default_icon":"images/icon.png"
       },
       "permissions": [
-        "storage",
         "webRequestBlocking",
         "webRequest",
-        "activeTab",
-        "tabs",
         "http://*/*",
         "https://*/*"
      ] 
